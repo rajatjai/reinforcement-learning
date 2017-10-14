@@ -2,7 +2,7 @@
 
 RL lies somewhere in between supervised and unsupervised learning. In supervised learning, one has a labeled dataset where each training sample has a target label. While in unsupervised learning, the dataset is not annotated or labeled. In RL though, one has rewards. Based only on these rewards, the agent learns to conduct itself in the environment. So the idea is one needs some sort of occasional feedback to know whether the agent did the right thing or not and then it can learn from its experiences.
 
-Concepts :
+## Concepts :
 
 The following concepts are explained in short to give a quick introduction to RL
 
@@ -15,8 +15,29 @@ The following concepts are explained in short to give a quick introduction to RL
     The flow is : State -> Action -> Reward -> State -> Action...  
     The episode ends with terminal state.  
       
+    Important terms :  
+    *Cumulative reward*: The cumulative reward is the discounted sum of reward accumulated throughout an episode.  
+    *Policy*: A Policy is the agent’s strategy to choose an action at each state. It is noted by π.  
+      
+    The **objective** of reinforcement learning is to train an agent such that his policy converges to the theoretical optimal policy.  
+      
+    More terminologies : http://www-anw.cs.umass.edu/rlr/terms.html  
+      
+* Policy and Value Functions
+      Value functions (either V or Q) are always conditional on some policy π.  
+      **Vπ(s,a)** is the expected return an agent is to receive from being in state s behaving under a policy π(a|s)  
+      **Qπ(s,a)** expresses the expected value of first taking action a from state s and then following policy π forever. In other words, it represents the expected return (cumulative discounted reward) an agent is to receive when taking action a in state s, and behaving according to a policy π(a|s)  afterwards (which is the probability of taking an action in a given state).  
+  
+* RL Algorithms
+      The goal of various algorithms is to find an **optimal policy** for an agent.  
+      Some algorithms -  
+      -  Q-Learning (variants : DQN, Double DQN..)  
+      -  SARSA  
+      -  Temporal Difference (TD)  
+      -  Policy Gradient (Continuous states and actions can be dealt with in exactly the same way as discrete ones, can be used either model-free or model-based as they are a generic formulation)  
+      -  Actor Critic, etc.   
+              
 * Role of neural networks  
 * Q-Learning  
 * DQN  
-* Policy and Value Functions  
 * Actor-Critic  
