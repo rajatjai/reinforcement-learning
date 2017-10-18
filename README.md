@@ -28,7 +28,7 @@ The following concepts are explained in short to give a quick introduction to RL
       **Vπ(s,a)** is the expected return an agent is to receive from being in state s behaving under a policy π(a|s)  
       **Qπ(s,a)** expresses the expected value of first taking action a from state s and then following policy π forever. In other words, it represents the expected return (cumulative discounted reward) an agent is to receive when taking action a in state s, and behaving according to a policy π(a|s)  afterwards (which is the probability of taking an action in a given state).  
   
-* RL Algorithms
+* RL Algorithms  
       The goal of various algorithms is to find an **optimal policy** for an agent.  
       Some algorithms -  
       -  Q-Learning (variants : DQN, Double DQN..)  
